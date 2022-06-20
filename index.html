@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <title>Budget Calculator</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark bg-gradient">
+      <div class="container">
+        <a href="" class="navbar-brand"> Budget Calculator </a>
+      </div>
+    </nav>
+
+    <div class="container mt-3">
+      <div class="card">
+        <div class="card-body">
+          <form>
+            <div class="row">
+              <div class="form-group col-md-8 mb-3">
+                <input type="text" class="form-control" id="expenseName" placeholder="Name" />
+              </div>
+              <div class="form-group col-md-2 mb-3">
+                <input type="text" class="form-control" id="expensePrice" placeholder="Price" />
+              </div>
+              <div class="form-group col-md-2 mb-3">
+                <select class="form-select" id="expenseTag" name="TagList">
+                  <option value="untagged">Select Tag</option>
+                  <option value="entertain">Entertain</option>
+                  <option value="food">Food</option>
+                  <option value="shopping">Shopping</option>
+                </select>
+              </div>
+            </div>
+            <button type="submit" id="addBtn" class="btn btn-primary btn-sm"><i class="fas fa-plus"></i> Add</button>
+            <button type="submit" id="updateBtn" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i> Save Changes</button>
+            <button type="submit" id="deleteBtn" class="btn btn-danger btn-sm"><i class="fas fa-times"></i> Delete</button>
+            <button type="submit" id="cancelBtn" class="btn btn-secondary btn-sm"><i class="fas fa-arrow-circle-left"></i> Cancel</button>
+          </form>
+        </div>
+      </div>
+      <div class="card mt-3">
+        <table class="table table-hover">
+          <thead class="table-dark">
+            <tr>
+              <td class="col-md-1">Number</td>
+              <td class="col-md-2">Date</td>
+              <td class="col-md-6">Action/Stuff</td>
+              <td class="col-md-1">Cost</td>
+              <td id="tagTitle" class="col-md-1">Tag</td>
+              <td class="col-md-1 text-end"></td>
+            </tr>
+          </thead>
+          <tbody id="item-list">
+            <!--  -->
+          </tbody>
+        </table>
+      </div>
+      <div class="card mt-3">
+        <div class="card-footer text-end">
+          <p>
+            Total (USD): <strong><span id="totalDollar"></span> $</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
